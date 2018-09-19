@@ -1,5 +1,6 @@
 export class Room {
-  id: number;
-  body: string;
-  postId: number;
+  checkin: string;
+  roomnumber: number;
+  checkout: string;
+  user: string;
 }
