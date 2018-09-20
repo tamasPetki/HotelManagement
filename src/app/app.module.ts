@@ -10,12 +10,17 @@ import { MatFormFieldModule} from '@angular/material';
 import { MatNativeDateModule} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { DatepickercomplexComponent } from './datepickercomplex/datepickercomplex.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ListComponent } from './list/list.component';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DatepickerComponent,
-    DatepickercomplexComponent
+    DatepickercomplexComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,9 @@ import { DatepickercomplexComponent } from './datepickercomplex/datepickercomple
     MatNativeDateModule,
     BrowserAnimationsModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
