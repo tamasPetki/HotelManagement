@@ -9,10 +9,15 @@ import {MatDatepickerModule} from '@angular/material';
 import { MatFormFieldModule} from '@angular/material';
 import { MatNativeDateModule} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
-import { DatepickercomplexComponent } from './datepickercomplex/datepickercomplex.component';
+import { DatepickercomplexComponent } from './datepicker/datepickercomplex/datepickercomplex.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ListComponent } from './list/list.component';
+import { ListComponent } from './table/list.component';
 import {MatTableModule} from '@angular/material/table';
+import { ListroomsfortodayComponent } from './table/rooms_for_today-in_table/listroomsfortoday.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MainComponent } from './main/main.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -20,7 +25,10 @@ import {MatTableModule} from '@angular/material/table';
     AppComponent,
     DatepickerComponent,
     DatepickercomplexComponent,
-    ListComponent
+    ListComponent,
+    ListroomsfortodayComponent,
+    MainComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,9 @@ import {MatTableModule} from '@angular/material/table';
     MatInputModule,
     HttpClientModule,
     NgbModule,
-    MatTableModule
+    MatTableModule,
+    AppRoutingModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
