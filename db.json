@@ -1,0 +1,26 @@
+{
+  "rooms": [
+
+      {
+        "checkin": "2018-10-21",
+        "roomnumber": 121,
+        "checkout": "2018-12-24",
+        "user": "Tóth Tamás"
+      },
+      {
+        "checkin": "2012-01-21",
+        "roomnumber": 231,
+        "checkout": "2018-03-24",
+        "user": "Jakab József"
+      }]
+  ,
+  "today": [
+    {
+      "checkin": "2012-01-21",
+      "roomnumber": 231,
+      "checkout": "2018-03-24",
+      "user": "Jakab József"
+    }
+  ],
+  "status":{"status": true}
+}

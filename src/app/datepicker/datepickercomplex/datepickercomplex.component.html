@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="mat-title">Choose a checkin date:</h2>
+      <app-datepicker [id]="'start'"></app-datepicker>
+      <h2 class="mat-title">Choose a checkout date:</h2>
+      <app-datepicker [id]="'end'"></app-datepicker>
+      <br>
+      <button (click)="freeBetweenDates()" class="btn btn-lg btn-primary">CHECK AVAILABILITY</button>
+    </div>
+      <div class="col-md-4">
+      </div>
+  </div>
+</div>
