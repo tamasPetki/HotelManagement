@@ -18,6 +18,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { AdminComponent } from './admin/admin.component';
+import { MatSelectModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -41,7 +44,10 @@ import { AdminComponent } from './admin/admin.component';
     NgbModule,
     MatTableModule,
     AppRoutingModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSelectModule,
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

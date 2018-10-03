@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
   <div class="row">
     <div class="col-md-6">
       <app-datepickercomplex (checkIfFreeEmitter)="isItFreeBetween($event)"></app-datepickercomplex>
@@ -7,5 +7,46 @@
       <div *ngIf="isItfree">THIS IS YOUR LUCKY DAY! WE HAVE SOME AVAILABLE ROOMS</div>
     </div>
   </div>
+</div>-->
+
+<div id="container">
+  <form>
+  <div class="row">
+    <div class="col">
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker1" placeholder="Choose a check in date" [(ngModel)]="checkin" name="CheckIn">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1  ></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker2" placeholder="Choose a check out date" [(ngModel)]="checkout" name="CheckOut">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2 ></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+
+
+  <mat-form-field>
+    <mat-select placeholder="View" [(ngModel)]="view" name="View" (selectionChange)="recordView($event)">
+      <mat-option value="seaside">Seaside</mat-option>
+      <mat-option value="garden">Garden</mat-option>
+      <mat-option value="firewall">Firewall</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-select placeholder="Room Type" [(ngModel)]="roomType" name="View" (selectionChange)="recordRoomType($event)">
+      <mat-option value="single">Single</mat-option>
+      <mat-option value="double">Double</mat-option>
+      <mat-option value="family">Family</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button id="bookbutton" (click)="getDataFromForm()">Check Availability and Book!</button>
+  </form>
 </div>
 
