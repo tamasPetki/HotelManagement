@@ -18,6 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { AdminComponent } from './admin/admin.component';
+import { TabLayoutComponent } from './admin/tab-layout/tab-layout.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { AdminComponent } from './admin/admin.component';
     ListComponent,
     ListroomsfortodayComponent,
     MainComponent,
-    AdminComponent
+    AdminComponent,
+    TabLayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { AdminComponent } from './admin/admin.component';
     NgbModule,
     MatTableModule,
     AppRoutingModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
