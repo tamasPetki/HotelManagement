@@ -1,0 +1,8 @@
+<div class="container mb-4 mt-4">
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" (dateInput)="emitChosenDate($event)">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <app-list [dataSource]="rooms"></app-list>
+</div>

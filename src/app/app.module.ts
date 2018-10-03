@@ -13,13 +13,13 @@ import { DatepickercomplexComponent } from './datepicker/datepickercomplex/datep
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListComponent } from './table/list.component';
 import {MatTableModule} from '@angular/material/table';
-import { ListroomsfortodayComponent } from './table/rooms_for_today-in_table/listroomsfortoday.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
 import {MatMenuModule} from '@angular/material/menu';
-import { AdminComponent } from './admin/admin.component';
 import { TabLayoutComponent } from './admin/tab-layout/tab-layout.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { RoomsForSpecifiedDateComponent } from './admin/tab-layout/rooms-for-specified-date/rooms-for-specified-date.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -28,10 +28,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     DatepickerComponent,
     DatepickercomplexComponent,
     ListComponent,
-    ListroomsfortodayComponent,
     MainComponent,
-    AdminComponent,
-    TabLayoutComponent
+    TabLayoutComponent,
+    RoomsForSpecifiedDateComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +44,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatTableModule,
     AppRoutingModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

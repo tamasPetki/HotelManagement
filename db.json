@@ -22,5 +22,30 @@
       "user": "Jakab József"
     }
   ],
-  "status":{"status": true}
+  "status":{"status": true},
+  "book": [
+    {
+      "checkin": "2018-10-21",
+      "roomnumber": 121,
+      "checkout": "2018-12-24",
+      "user": "Tóth Tamás"
+    },
+    {
+      "checkin": "2012-01-21",
+      "roomnumber": 231,
+      "checkout": "2018-03-24",
+      "user": "Jakab József"
+    },
+    {
+      "checkin": "2122-03-21",
+      "roomnumber": 431,
+      "checkout": "2023-03-24",
+      "user": "Johnny Gold"
+    },
+    {
+      "checkin": "2014-05-21",
+      "roomnumber": 111,
+      "checkout": "2016-03-24",
+      "user": "Pápai Joci"
+    }]
 }

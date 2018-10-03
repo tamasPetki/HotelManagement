@@ -32,6 +32,14 @@ export class RetrieverService {
 
   constructor(private daterangeservice: DaterangeService, private http: HttpClient) {
   }
+
+  getReservationsBetweenDateRange(date: string): Observable<Room[]> {
+    return this.http.get<Room[]>('http://localhost:3000/book',
+      {
+        observe: 'body', params: new HttpParams()
+          .set('checkinmilis', date)
+      });
+  }
 }
 
 /*  consolePrinter(): void {
