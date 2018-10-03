@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {RetrieverService} from '../retriever.service';
 import {Observable} from 'rxjs';
 import {MatDatepicker, MatDatepickerInput, MatOption, MatSelect} from '@angular/material';
+import {NgForm} from '@angular/forms';
 
 
 @Component({
@@ -11,34 +12,17 @@ import {MatDatepicker, MatDatepickerInput, MatOption, MatSelect} from '@angular/
 })
 export class MainComponent implements OnInit {
 
-  checkin: MatDatepickerInput<Date>;
-  checkout: MatDatepickerInput<Date>;
-  view: String = null;
-  roomType: String = null;
+  requestedDateAndType: { checkIn: Date, checkOut: Date, viewType: string, roomType: string };
 
   constructor(private retriever: RetrieverService) {
   }
 
-
-
   ngOnInit() {
-
-
   }
 
-  getDataFromForm(){
-    const checkindate: Date = this.checkin;
-    const checkoutdate: Date = this.checkout;
-    let checkinmilis: number = checkindate.getTime();
-    let checkoutmilis: number = checkoutdate.getTime();
-  }
-
-  recordView(event){
-    console.log(event.value.toString());
-  }
-
-  recordRoomType(event){
-    console.log(event.value.toString());
+  formSubmit(form: NgForm) {
+    this.requestedDateAndType = form.value;
+    console.log(this.requestedDateAndType);
   }
 
 }
