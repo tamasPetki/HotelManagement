@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {RetrieverService} from '../retriever.service';
 import {Room} from '../Room';
 import { FormsModule} from '@angular/forms';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 @Component({
   selector: 'app-list',
@@ -11,18 +13,12 @@ import { FormsModule} from '@angular/forms';
 export class ListComponent implements OnInit {
 
   rooms: Room[];
+  @Input() isLoadingResults = false;
 
   displayedColumns: string[] = ['Number', 'CheckIn', 'CheckOut', 'User'];
-  dataSource = this.retriever.getRoomsForToday();
+  @Input() dataSource: Room[];
 
-  getRoomsTod() {
-  }
-
-//   getRooms(): void {
-//     this.retriever.getRooms().subscribe(room => this.rooms = room as Room[]);
-// }
-
-  constructor(private retriever: RetrieverService) { }
+  constructor() { }
 
   ngOnInit() {
   }

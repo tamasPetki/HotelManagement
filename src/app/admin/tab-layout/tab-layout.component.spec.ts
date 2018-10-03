@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListroomsfortodayComponent } from './listroomsfortoday.component';
+import { TabLayoutComponent } from './tab-layout.component';
 
-describe('ListroomsfortodayComponent', () => {
-  let component: ListroomsfortodayComponent;
-  let fixture: ComponentFixture<ListroomsfortodayComponent>;
+describe('TabLayoutComponent', () => {
+  let component: TabLayoutComponent;
+  let fixture: ComponentFixture<TabLayoutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListroomsfortodayComponent ]
+      declarations: [ TabLayoutComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListroomsfortodayComponent);
+    fixture = TestBed.createComponent(TabLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
