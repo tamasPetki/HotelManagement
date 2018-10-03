@@ -11,10 +11,10 @@ import {MatDatepicker, MatDatepickerInput, MatOption, MatSelect} from '@angular/
 })
 export class MainComponent implements OnInit {
 
-  checkin:MatDatepickerInput<Date>;
-  checkout:MatDatepickerInput<Date>;
-  view:String = null;
-  roomType:String = null;
+  checkin: MatDatepickerInput<Date>;
+  checkout: MatDatepickerInput<Date>;
+  view: String = null;
+  roomType: String = null;
 
   constructor(private retriever: RetrieverService) {
   }
@@ -27,10 +27,10 @@ export class MainComponent implements OnInit {
   }
 
   getDataFromForm(){
-    const checkindate:Date = this.checkin;
-    const checkoutdate:Date = this.checkout;
-    let checkinmilis:number = checkindate.getTime();
-    let checkoutmilis:number = checkoutdate.getTime();
+    const checkindate: Date = this.checkin;
+    const checkoutdate: Date = this.checkout;
+    let checkinmilis: number = checkindate.getTime();
+    let checkoutmilis: number = checkoutdate.getTime();
   }
 
   recordView(event){
