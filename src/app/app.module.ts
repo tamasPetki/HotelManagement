@@ -16,7 +16,6 @@ import {MatTableModule} from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
 import {MatMenuModule} from '@angular/material/menu';
-import { AdminComponent } from './admin/admin.component';
 import { MatSelectModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
@@ -50,7 +49,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatMenuModule,
     MatSelectModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
     MatMenuModule,
     MatTabsModule,
     MatProgressSpinnerModule
