@@ -12,12 +12,14 @@ import {getRootView} from '@angular/core/src/render3/instructions';
 
 export class RetrieverService {
 
-  getRoomsBetweenDateRange(): Observable<{ status: string }> {
+  getRoomsBetweenDateRange(checkin:number, checkout:number, view:string, roomType:string): Observable<{ status: string }> {
     return this.http.get<{ status: string }>('http://localhost:8080/book',
       {
         observe: 'body', params: new HttpParams()
-          .set('checkinmilis', this.daterangeservice.daterange.startDate)
-          .set('checkoutmilis', this.daterangeservice.daterange.endDate)
+          .set('checkinmilis', checkin.toString())
+          .set('checkoutmilis', checkout.toString())
+          .set('view', view)
+          .set('roomtype', roomType)
       });
   }
 
