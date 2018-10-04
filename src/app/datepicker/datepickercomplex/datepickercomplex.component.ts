@@ -17,7 +17,7 @@ export class DatepickercomplexComponent implements OnInit {
   isFree: Observable<{ status: string }>;
 
   getIfFreeBetweenDates() {
-    
+
   }
 
   freeBetweenDates() {
