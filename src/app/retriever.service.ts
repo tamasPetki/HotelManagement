@@ -12,6 +12,8 @@ import {getRootView} from '@angular/core/src/render3/instructions';
 
 export class RetrieverService {
 
+  user: {id: number, name: string, password: string, email: string, admin: boolean};
+
   getRoomsBetweenDateRange(checkin:number, checkout:number, view:string, roomType:string): Observable<{ status: string }> {
     return this.http.get<{ status: string }>('http://localhost:8080/book',
       {
@@ -46,6 +48,8 @@ export class RetrieverService {
   sendLoginForm (userdata: {username: string, password: string}): Observable<{ id: number, name: string, password: string, email: string, admin: boolean}> {
     return this.http.post<{ id: number, name: string, password: string, email: string, admin: boolean}>('http://localhost:8080/login', userdata);
   }
+
+
 }
 
 /*  consolePrinter(): void {

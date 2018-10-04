@@ -58,7 +58,7 @@ import {MatCardModule} from '@angular/material/card';
     MatProgressSpinnerModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [LoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

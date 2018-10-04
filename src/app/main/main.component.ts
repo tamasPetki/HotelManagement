@@ -27,7 +27,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     this.loggedinservice.checkIfLoggedIn().subscribe(data => {
-      const loggedin = data.loggedin;
+      const loggedin = data.message;
       if (loggedin === 'success') {
         this.loggedin = true;
       } else {
@@ -61,7 +61,10 @@ export class MainComponent implements OnInit {
     console.log(this.view);
     console.log(this.roomType);
     this.loggedinservice.checkIfLoggedIn().subscribe(data => {
-      const loggedin = data.loggedin;
+      const loggedin = data.message;
+      console.log(data);
+      console.log(data.message);
+
 
       if (loggedin === 'success') {
         this.retriever.getRoomsBetweenDateRange(this.checkin, this.checkout, this.view, this.roomType)

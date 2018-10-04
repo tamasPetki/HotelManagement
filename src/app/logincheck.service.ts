@@ -11,7 +11,7 @@ export class LogincheckService {
 
   }
 
-  checkIfLoggedIn(): Observable<{'loggedin': string}> {
-    return this.http.get<{'loggedin': string}>('http://localhost:8080/isloggedin');
+  checkIfLoggedIn(): Observable<{message: string}> {
+    return this.http.get<{message: string}>('http://localhost:8080/isloggedin');
   }
 }
