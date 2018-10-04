@@ -8,12 +8,13 @@
     </div>
   </div>
 </div>-->
+
 <div id="container">
-  <form (ngSubmit)="formSubmit(f)" #f="ngForm">
+  <form>
   <div class="row">
     <div class="col">
       <mat-form-field>
-        <input ngModel matInput [matDatepicker]="picker1" placeholder="Choose a check in date" name="CheckIn">
+        <input matInput [matDatepicker]="picker1" placeholder="Choose a check in date" [value]="startDate.value" (dateChange)="recordCheckinDate($event)">
         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
         <mat-datepicker #picker1  ></mat-datepicker>
       </mat-form-field>
@@ -21,7 +22,7 @@
 
     <div class="col">
       <mat-form-field>
-        <input ngModel matInput [matDatepicker]="picker2" placeholder="Choose a check out date" name="CheckOut">
+        <input matInput [matDatepicker]="picker2" placeholder="Choose a check out date"  [value]="endDate.value" (dateChange)="recordCheckoutDate($event)">
         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
         <mat-datepicker #picker2 ></mat-datepicker>
       </mat-form-field>
@@ -30,7 +31,7 @@
 
 
   <mat-form-field>
-    <mat-select ngModel name="viewType" placeholder="View" (selectionChange)="recordView($event)">
+    <mat-select placeholder="View" (selectionChange)="recordView($event)" >
       <mat-option value="seaside">Seaside</mat-option>
       <mat-option value="garden">Garden</mat-option>
       <mat-option value="firewall">Firewall</mat-option>
@@ -39,13 +40,13 @@
 
 
   <mat-form-field>
-    <mat-select ngModel name="roomType" placeholder="Room Type"  (selectionChange)="recordRoomType($event)">
+    <mat-select placeholder="Room Type" (selectionChange)="recordRoomType($event)">
       <mat-option value="single">Single</mat-option>
       <mat-option value="double">Double</mat-option>
       <mat-option value="family">Family</mat-option>
     </mat-select>
   </mat-form-field>
-  <button mat-raised-button id="bookbutton" type="submit">Check Availability and Book!</button>
+  <button mat-raised-button id="bookbutton" (click)="collectData()">Check Availability and Book!</button>
   </form>
 </div>
 
