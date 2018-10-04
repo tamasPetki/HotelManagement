@@ -42,6 +42,10 @@ export class RetrieverService {
           .set('checkinmilis', date)
       });
   }
+
+  sendLoginForm (userdata: {username: string, password: string}): Observable<{ id: number, name: string, password: string, email: string, admin: boolean}> {
+    return this.http.post<{ id: number, name: string, password: string, email: string, admin: boolean}>('http://localhost:8080/login', userdata);
+  }
 }
 
 /*  consolePrinter(): void {

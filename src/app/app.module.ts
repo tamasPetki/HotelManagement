@@ -23,6 +23,8 @@ import { TabLayoutComponent } from './admin/tab-layout/tab-layout.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { RoomsForSpecifiedDateComponent } from './admin/tab-layout/rooms-for-specified-date/rooms-for-specified-date.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { LoginComponent } from './login/login.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     ListComponent,
     MainComponent,
     TabLayoutComponent,
-    RoomsForSpecifiedDateComponent
+    RoomsForSpecifiedDateComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     FormsModule,
     MatMenuModule,
     MatTabsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
