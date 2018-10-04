@@ -32,7 +32,7 @@ export class RetrieverService {
   }
 
 
-  constructor(private daterangeservice: DaterangeService, private http: HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   getReservationsBetweenDateRange(date: string): Observable<Room[]> {
